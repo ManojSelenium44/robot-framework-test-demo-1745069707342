@@ -1,5 +1,9 @@
-*** Settings ***
 *** Keywords ***
 Login With Invalid Credentials
     [Arguments]    ${username}    ${password}
-    # Implementation for login with invalid credentials
+    Log    Attempting to log in with username: ${username} and password: ${password}
+    # Add actual login implementation here
+
+Login With Empty Fields
+    Log    Attempting to log in with empty fields
+    # Add actual login implementation here

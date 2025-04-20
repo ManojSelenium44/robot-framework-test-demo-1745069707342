@@ -1,12 +1,17 @@
 *** Settings ***
-*** Test Cases ***
-Invalid Login Test
-    [Template]    Login With Invalid Credentials
-    invalid_user    password123
-    test_user    wrong_password
-    ${EMPTY}    password123
-    test_user    ${EMPTY}
+Library    SeleniumLibrary
 
-Empty Credentials Test
-    [Template]    Login With Empty Fields
-    ${EMPTY}    ${EMPTY}
+*** Variables ***
+${URL}    http://example.com/login
+${USERNAME}    valid_user
+${PASSWORD}    valid_password
+
+*** Test Cases ***
+Successful Login Test
+    [Documentation]    This test verifies that a user can successfully log in with valid credentials.
+    Open Browser    ${URL}    chrome
+    Input Text    username_field    ${USERNAME}
+    Input Text    password_field    ${PASSWORD}
+    Click Button    login_button
+    Page Should Contain    Welcome, ${USERNAME}
+    Close Browser

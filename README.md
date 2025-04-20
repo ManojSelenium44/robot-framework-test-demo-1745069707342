@@ -1,11 +1,7 @@
-## Project Setup
+# Robot Framework Test Demo
 
-This is a Robot Framework UI test project for testing login functionality.
+This project contains Robot Framework tests for web application login functionality.
 
-### Installation
-1. Install Python
-2. Install Robot Framework and SeleniumLibrary
-
-### How to Run Tests
-1. Clone the repository
-2. Run tests with Robot Framework
+## New Test Cases
+- **Invalid Login Test**: Verifies that login fails with invalid credentials.
+- Added reusable keywords for login operations in `tests/common/keywords.robot`.

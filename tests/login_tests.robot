@@ -1,16 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-*** Variables ***
-${URL}    http://example.com/login
-${USERNAME}    test_user
-${PASSWORD}    correct_password
-
 *** Test Cases ***
 Successful Login Test
-    Open Browser    ${URL}    chrome
-    Input Text    username_field    ${USERNAME}
-    Input Text    password_field    ${PASSWORD}
-    Click Button    login_button
-    Page Should Contain    Welcome, ${USERNAME}
-    Close Browser
+    [Documentation]    This test verifies that a user can successfully log in with valid credentials.
+    Open Browser    https://example.com/login    chrome
+    Input Text    id=username    valid_user
+    Input Text    id=password    valid_password
+    Click Button    id=submit
+    Page Should Contain    Welcome, valid_user

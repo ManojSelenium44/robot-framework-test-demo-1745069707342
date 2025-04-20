@@ -1,7 +1,7 @@
-# Robot Framework Test Demo
-
-This project contains Robot Framework tests for web application login functionality.
-
 ## New Test Cases
-- **Invalid Login Test**: Verifies that login fails with invalid credentials.
-- Added reusable keywords for login operations in `tests/common/keywords.robot`.
+
+### Invalid Login Test
+Tests the login functionality with invalid credentials.
+
+### Empty Field Test
+Tests the login functionality with empty fields.

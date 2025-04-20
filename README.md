@@ -1,7 +1,7 @@
-# Robot Framework Test Project
+# Robot Framework Test Demo
 
-## New Test Cases
-- **Invalid Username Test**: Tests login with an invalid username.
-- **Invalid Password Test**: Tests login with a valid username but invalid password.
-- **Empty Username Test**: Tests login with an empty username.
-- **Empty Password Test**: Tests login with a valid username but empty password.
+## Test Cases
+
+### Negative Test Cases
+- Invalid Login Test: Tests login with invalid credentials.
+- Empty Credentials Test: Tests login with empty username and password.

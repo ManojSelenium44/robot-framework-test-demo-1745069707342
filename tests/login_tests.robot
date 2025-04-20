@@ -3,12 +3,11 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    http://example.com/login
-${USERNAME}    valid_user
-${PASSWORD}    valid_password
+${USERNAME}    test_user
+${PASSWORD}    correct_password
 
 *** Test Cases ***
 Successful Login Test
-    [Documentation]    This test case verifies that a user can successfully log in with valid credentials.
     Open Browser    ${URL}    chrome
     Input Text    username_field    ${USERNAME}
     Input Text    password_field    ${PASSWORD}

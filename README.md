@@ -1,2 +1,7 @@
-# robot-framework-test-demo-1745069707342
-Robot Framework UI test project
+# Robot Framework Test Demo
+
+## Test Cases
+
+### Negative Test Cases
+- Invalid Login Test: Tests login with invalid credentials.
+- Empty Credentials Test: Tests login with empty username and password.

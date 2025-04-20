@@ -1,14 +1,17 @@
 *** Settings ***
 *** Test Cases ***
-Invalid Login Test
+Invalid Username Test
     [Template]    Login With Invalid Credentials
     invalid_user    password123
-    test_user    wrong_password
-    ${EMPTY}    password123
-    test_user    ${EMPTY}
 
-Empty Field Test
-    [Template]    Login With Empty Fields
-    ${EMPTY}    ${EMPTY}
-    invalid_user    ${EMPTY}
+Invalid Password Test
+    [Template]    Login With Invalid Credentials
+    test_user    wrong_password
+
+Empty Username Test
+    [Template]    Login With Invalid Credentials
+    ${EMPTY}    password123
+
+Empty Password Test
+    [Template]    Login With Invalid Credentials
     test_user    ${EMPTY}
